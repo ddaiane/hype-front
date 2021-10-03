@@ -4,7 +4,14 @@
     font-weight: bold;
 }
 
-.botao:hover {
-    background-color: #5c62a3;
-    color: #4ff1cc;
+
+
+ .botao:hover {
+    background-color: #5c62a3 !important;
+    color: #4ff1cc !important;
+} 
+
+.botao:focus {
+    background-color: #23cfa6;
+    
 }

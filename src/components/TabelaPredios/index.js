@@ -51,6 +51,8 @@ function TabelaPredios() {
 
 
     return (
+      <>
+      <h1 className="titulo">Prédios</h1>
         <Table bordered responsive="sm" id="tabela">
   <thead>
     <tr id="tableHead">
@@ -81,6 +83,7 @@ function TabelaPredios() {
 } 
 </tbody>
 </Table>
+</>
     )
 };
 

@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Khand&display=swap');
+
 #delete, #tableHead {
     text-align: center;
 }
 
 #tabela {
     margin: 2%;
+    background-color: seashell;
 }
 
 .clicavel {
@@ -22,4 +25,13 @@
 
 #tableBody {
     color: #353e52;
+}
+
+.titulo {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Barlow', sans-serif;
+    text-shadow: 1px 0px 1px #27b391;
+    color: rgb(31, 185, 149);
+    margin: 2%;
 }

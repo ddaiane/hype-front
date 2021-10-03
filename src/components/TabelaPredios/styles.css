@@ -1,0 +1,25 @@
+#delete, #tableHead {
+    text-align: center;
+}
+
+#tabela {
+    margin: 2%;
+}
+
+.clicavel {
+    cursor:pointer;
+}
+
+.item:hover {
+    background-color: #23cfa6;
+    color: white;
+  }
+
+#tableHead {
+    background-color: #353e52;
+    color: white;
+}
+
+#tableBody {
+    color: #353e52;
+}

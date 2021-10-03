@@ -1,4 +1,21 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
+
+
+function App() {
+  return (
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+  );
+}
+
+export default App;
+
+
+
+/* import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; */

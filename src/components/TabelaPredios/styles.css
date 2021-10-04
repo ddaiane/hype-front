@@ -9,9 +9,7 @@
     background-color: seashell;
 }
 
-.clicavel {
-    cursor:pointer;
-}
+
 
 .item:hover {
     background-color: #23cfa6;
@@ -27,11 +25,4 @@
     color: #353e52;
 }
 
-.titulo {
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Barlow', sans-serif;
-    text-shadow: 1px 0px 1px #27b391;
-    color: rgb(31, 185, 149);
-    margin: 2%;
-}
+

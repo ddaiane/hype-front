@@ -5,10 +5,32 @@ body {
   font-family: 'Barlow', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: red;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.titulo {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Barlow', sans-serif;
+  text-shadow: 1px 0px 1px #27b391;
+}
+
+.boxTitulo {
+  margin: auto;
+  width: 100%;
+  background-color: rgba(31, 185, 149, 0.3); 
+  color: rgba(53, 62, 82, 0.9);
+  margin-top: 35px;
+  padding: 2px;
+}
+
+.clicavel {
+  cursor:pointer;
 }

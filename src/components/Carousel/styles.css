@@ -7,13 +7,13 @@
   object-fit: none;
 }
 
-article {
+.captionCarousel {
   font-family: 'Barlow';
   font-weight: bold;
     margin: auto;
     width: 40%;
     background-color: rgba(31, 185, 149, 0.8); }
 
-article:hover {
+  .captionCarousel:hover {
     cursor: pointer;
 }

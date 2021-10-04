@@ -3,14 +3,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 
-import TabelaPredios from '../../components/TabelaPredios';
 import Header from '../../components/Header';
 import SlidesImagens from '../../components/Carousel';
-import './styles.css';
+import FormNovoPredio from '../../components/FormNovoPredio';
+//import './styles.css';
 
 
 
-function Home() {
+function CadastraPredio() {
 
 
 
@@ -18,14 +18,15 @@ function Home() {
         <><Header />
         <SlidesImagens />
         <article className="boxTitulo">
-      <h1 className="titulo">Prédios</h1>
+      <h1 className="titulo">Novo Prédio</h1>
       </article>
-        <Container fluid="md">
-            <TabelaPredios />
-        </Container></>
+      <Container fluid="sm">
+      <FormNovoPredio />
+      </Container>
+</>
 
     )
 };
 
 
-export default Home;
+export default CadastraPredio;

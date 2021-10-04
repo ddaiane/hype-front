@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import Table from 'react-bootstrap/Table'
+import React, {useState, useEffect} from 'react';
+import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CgTrash } from "react-icons/cg";
 
@@ -10,18 +10,8 @@ import './styles.css';
 
 function TabelaPredios() {
     const [predios, setPredios] = useState([]);
-
-    //chamada para api
-    const prediosRequest = useCallback(() => {
-        api
-        .get(`/predios`)
-        .then((response) => {
-          setPredios(response.data);
-        })
-        .catch((error) => {
-          alert("Ocorreu um erro ao buscar predios");
-        });
-    }, []);
+    const [changes = false, setChanges] = useState(); //controla mudanças na pagina pra carregar novamente
+    
     
 
       //carrega tela de apartamentos do predio
@@ -36,7 +26,7 @@ function TabelaPredios() {
           api
             .delete(`/predios/${sigla}`)
             .then((response) => {
-                prediosRequest();
+                setChanges(true);
                 alert(`O prédio ${response.data} foi deletado do sistema`);
             })
             .catch((error) => {
@@ -44,15 +34,25 @@ function TabelaPredios() {
             })}
       }
 
-          //chamada inicial para api
+
+          //chamadas para api
     useEffect(() => {
-        prediosRequest();
+      api
+      .get(`/predios`)
+      .then((response) => {
+        setPredios(response.data);
+      })
+      .catch((error) => {
+        alert("Ocorreu um erro ao buscar predios");
       });
+      setChanges(false);
+      }, [changes]);
+
 
 
     return (
       <>
-      <h1 className="titulo">Prédios</h1>
+      
         <Table bordered responsive="sm" id="tabela">
   <thead>
     <tr id="tableHead">

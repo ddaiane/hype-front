@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Khand&display=swap');
 
-#delete, #tableHead {
+.icone, #tableHead {
     text-align: center;
 }
 

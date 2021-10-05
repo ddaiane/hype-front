@@ -3,9 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import CadastraPredio from '../pages/CadastraPredio';
-//import Detail from '../pages/Detail';
-//import Create from '../pages/Create';
-
+import CadastraApartamento from '../pages/CadastraApartamento';
 
 
 export default function Routes() {
@@ -14,8 +12,8 @@ export default function Routes() {
       <Switch>
       <Route path="/" exact component={Home}/>
       <Route path="/cadastra-predio" component={CadastraPredio}/>
-        {/* <Route path="/detail/:id" component={Detail}/>
-        <Route path="/create" component={Create}/> */}
+      <Route path="/cadastra-apartamento/:sigla" component={CadastraApartamento} />
+
       <Route path="*" exact component={Home}/>
     </Switch>
     </BrowserRouter>

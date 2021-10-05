@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from 'react';
+import { useHistory } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CgTrash } from "react-icons/cg";
+import { CgAdd } from "react-icons/cg";
 
 import api from '../../services/api';
 import './styles.css';
@@ -11,6 +15,9 @@ import './styles.css';
 function TabelaPredios() {
     const [predios, setPredios] = useState([]);
     const [changes = false, setChanges] = useState(); //controla mudanças na pagina pra carregar novamente
+
+
+    let history = useHistory();
     
     
 
@@ -58,12 +65,24 @@ function TabelaPredios() {
     <tr id="tableHead">
       <th>#</th>
       <th>Sigla</th>
+      
+      <OverlayTrigger
+      overlay={
+        <Tooltip>
+          Clique no nome do prédio para ver os apartamentos associados a ele!
+        </Tooltip>
+      }
+    >
       <th>Nome</th>
+    </OverlayTrigger>
+      
       <th>Endereço</th>
       <th>Cidade</th>      
       <th>Estado</th>
       <th>Unidades</th>
       <th>Deletar</th>
+      <th>Adicionar apartamento</th>
+
     </tr>
   </thead>
   <tbody id="tableBody">
@@ -77,7 +96,8 @@ function TabelaPredios() {
         <td>{predio.cidade}</td>
         <td>{predio.estado}</td>
         <td>{predio.apartamentos}</td>
-        <td className="clicavel" id="delete" onClick={() => deletaPredio(predio.sigla, predio.nome)}><CgTrash /></td>
+        <td className="clicavel icone" onClick={() => deletaPredio(predio.sigla, predio.nome)}><CgTrash /></td>
+        <td className="clicavel icone" onClick={() =>  history.push(`cadastra-apartamento/${predio.sigla}`)}><CgAdd /></td>
       </tr>)    
 })
 } 

@@ -23,7 +23,7 @@ function TabelaPredios() {
 
       //carrega tela de apartamentos do predio
       function abrePredio(sigla) {
-          alert(sigla);
+          history.push(`/apartamentos-predio/${sigla}`)
       }
 
       //deleta predio
@@ -60,7 +60,7 @@ function TabelaPredios() {
     return (
       <>
       
-        <Table bordered responsive="sm" id="tabela">
+        <Table bordered responsive="sm" id="tabela" className="my-5">
   <thead>
     <tr id="tableHead">
       <th>#</th>

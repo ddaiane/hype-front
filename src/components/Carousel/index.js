@@ -1,13 +1,18 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 function SlidesImagens() {
 
-    function abrePredio(sigla) {
-        alert(sigla);
-    }
+  let history = useHistory();
+   
+
+  //carrega tela de apartamentos do predio
+  function abrePredio(sigla) {
+      history.push(`/apartamentos-predio/${sigla}`)
+  }
 
     return(
 <Carousel>

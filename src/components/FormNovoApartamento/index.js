@@ -37,7 +37,7 @@ function FormNovoApartamento() {
                 .post("/apartamentos/", dados)
                 .then((res) => {
                     alert(`Apartamento código ${res.data[0].codigo} criado com sucesso no prédio ${res.data[0].predio}!`);
-                    history.push(`/`);
+                    history.push(`../apartamentos-predio/${sigla}`);
                 })
                 .catch((erro) => {
                     alert(`Erro no cadastro de novo apartamento.\nMotivo: ${erro.response.data.message}`);

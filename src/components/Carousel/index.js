@@ -23,7 +23,7 @@ function SlidesImagens() {
       alt="Imagem prédio Move City Habitat"
     />
     <Carousel.Caption>
-        <article className="captionCarousel" onClick={() => abrePredio("MOVE")}>
+        <article className="captionCarousel" onClick={() => abrePredio("move")}>
             <h1>Move City Habitat</h1>
         </article>
     </Carousel.Caption>
@@ -36,7 +36,7 @@ function SlidesImagens() {
       alt="Second slide"
     />
     <Carousel.Caption>
-        <article className="captionCarousel" onClick={() => abrePredio("KEEP")}>
+        <article className="captionCarousel" onClick={() => abrePredio("keep")}>
             <h1>Keep Urban Habitat</h1>
         </article>
     </Carousel.Caption>
@@ -48,7 +48,7 @@ function SlidesImagens() {
       alt="Third slide"
     />
     <Carousel.Caption>
-        <article className="captionCarousel" onClick={() => abrePredio("KLEE")}>
+        <article className="captionCarousel" onClick={() => abrePredio("klee")}>
             <h1>Klee Urban Habitat</h1>
         </article>
     </Carousel.Caption>

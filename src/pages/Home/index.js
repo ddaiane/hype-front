@@ -1,7 +1,9 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
 import TabelaPredios from '../../components/TabelaPredios';
 import Header from '../../components/Header';
@@ -12,6 +14,8 @@ import './styles.css';
 
 function Home() {
 
+    let history = useHistory();
+
     return (
         <><Header />
         <SlidesImagens />
@@ -20,7 +24,8 @@ function Home() {
       </article>
         <Container fluid="md">
             <TabelaPredios />
-        </Container></>
+        </Container>
+        </>
 
     )
 };

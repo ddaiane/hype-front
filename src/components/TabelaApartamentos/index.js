@@ -44,7 +44,7 @@ function TabelaApartamentos() {
         history.push(`/`)
       });
       setChanges(false);
-      }, [changes]);
+      }, [changes, sigla]);
 
 
     return (

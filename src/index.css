@@ -19,8 +19,7 @@ code {
   text-align: center;
   font-weight: bold;
   font-family: 'Barlow', sans-serif;
-  text-shadow: 1px 0px 1px #27b391;
-}
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.71);}
 
 .boxTitulo {
   margin: auto;
@@ -36,3 +35,4 @@ code {
 .clicavel {
   cursor:pointer;
 }
+

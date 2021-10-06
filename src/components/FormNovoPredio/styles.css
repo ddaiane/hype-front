@@ -2,3 +2,21 @@
     width: 70%;
     margin: 40px;
 }
+
+.botaoCancel {
+    background-color: #86a39c;
+    border-color: #424242;
+    font-weight: bold;
+  }
+  
+  
+  
+  .botaoCancel:hover {
+    background-color: #5c62a3 !important;
+    color: white !important;
+  } 
+  
+  .botaoCancel:focus {
+    background-color: #23cfa6;
+    
+  }

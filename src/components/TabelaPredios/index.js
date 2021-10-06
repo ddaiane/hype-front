@@ -37,7 +37,7 @@ function TabelaPredios() {
                 alert(`O prédio ${response.data} foi deletado do sistema`);
             })
             .catch((error) => {
-                alert(error.response.data.message);
+                alert(`Prédio não pode ser deletado. \nMotivo: ${error.response.data.message}`);
             })}
       }
 

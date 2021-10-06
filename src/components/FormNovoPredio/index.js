@@ -37,7 +37,7 @@ function FormNovoPredio() {
                 history.push(`/`);
             })
             .catch((erro) => {
-                console.log(erro);
+                alert(`Erro no cadastro de novo prédio.\nMotivo: ${erro.response.data.message}`);
             })}
     }
 
@@ -112,6 +112,9 @@ function FormNovoPredio() {
     </Form.Group>    
       </Col>
   </Row>
+  <Form.Text muted>
+    * Todos os campos são obrigatórios.
+  </Form.Text>
   <div className="d-grid gap-2 mt-3">
 <Button className="botao" size="lg" onClick={postPredio}>
           Cadastrar Novo Prédio
@@ -120,7 +123,7 @@ function FormNovoPredio() {
 </Form>
 
         <div className="d-grid gap-2 mt-3">
-<Button className="botao" size="lg" onClick={() =>  history.push(`/`)}>
+<Button className="botaoCancel" size="lg" onClick={() =>  history.push(`/`)}>
           Cancelar e voltar para home
         </Button>
         </div>

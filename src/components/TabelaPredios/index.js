@@ -79,9 +79,10 @@ function TabelaPredios() {
       <th>Endereço</th>
       <th>Cidade</th>      
       <th>Estado</th>
-      <th>Unidades</th>
+      <th>Apartamentos<br />no prédio</th>
+      <th>Apartamentos<br />cadastrados</th>
       <th>Deletar</th>
-      <th>Adicionar apartamento</th>
+      <th>Cadastrar<br />apartamento</th>
 
     </tr>
   </thead>
@@ -96,6 +97,7 @@ function TabelaPredios() {
         <td>{predio.cidade}</td>
         <td>{predio.estado}</td>
         <td>{predio.apartamentos}</td>
+        <td> {predio.unidadesCadastradas ? predio.unidadesCadastradas : "0"} </td>
         <td className="clicavel icone" onClick={() => deletaPredio(predio.sigla, predio.nome)}><CgTrash /></td>
         <td className="clicavel icone" onClick={() =>  history.push(`cadastra-apartamento/${predio.sigla}`)}><CgAdd /></td>
       </tr>)    

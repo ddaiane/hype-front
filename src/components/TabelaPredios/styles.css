@@ -2,6 +2,7 @@
 
 .icone, #tableHead {
     text-align: center;
+    vertical-align: middle;
 }
 
 #tabela {

@@ -40,7 +40,6 @@ function TabelaApartamentos() {
         setApartamentos(response.data);
       })
       .catch((error) => {
-        alert("Ocorreu um erro ao buscar apartamentos");
         history.push(`/`)
       });
       setChanges(false);

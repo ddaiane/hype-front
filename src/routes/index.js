@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import CadastraPredio from '../pages/CadastraPredio';
 import CadastraApartamento from '../pages/CadastraApartamento';
 import ListaApartamentos from '../pages/ListaApartamentos';
+import URLdesconhecida from '../pages/URLdesconhecida';
 
 
 export default function Routes() {
@@ -16,7 +17,7 @@ export default function Routes() {
       <Route path="/cadastra-apartamento/:sigla" component={CadastraApartamento} />
       <Route path="/apartamentos-predio/:sigla" component={ListaApartamentos} />
 
-      <Route path="*" exact component={Home}/>
+      <Route path="*" exact component={URLdesconhecida}/>
     </Switch>
     </BrowserRouter>
   )
